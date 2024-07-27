@@ -99,10 +99,29 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/mydatabase', {
+
+const DB='mongodb+srv://abdusshahid11399:3QppeRMJJ15VCkwE@cluster0.w3xas7k.mongodb.net/mydatabase?retryWrites=true&w=majority&appName=Cluster0'
+
+// mongoose.connect('mongodb://localhost:27017/mydatabase', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+
+
+
+
+mongoose.connect(DB, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+})
+.then(() => {
+  console.log('MongoDB connection successful');
+})
+.catch(err => {
+  console.error('MongoDB connection error:', err.message);
 });
+
+
 
 
 // Define User Schema
