@@ -36,7 +36,7 @@ function App() {
     <AuthProvider>
       <Router>
         <Routes>
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<LoginPage />} />
           <Route path="/form" element={<ProtectedRoute element={<FormPage />} />} />
           <Route path="/view" element={<ProtectedRoute element={<ViewPage />} />} />
         </Routes>

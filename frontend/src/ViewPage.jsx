@@ -47,7 +47,7 @@ const ViewPage = () => {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.header}>View Forms</h1>
+      <h1 style={styles.header}>View Form Data: </h1>
       <ul style={styles.list}>
         {forms.map((form) => (
           <li key={form._id} style={styles.listItem}>
